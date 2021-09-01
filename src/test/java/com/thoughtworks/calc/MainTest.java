@@ -10,10 +10,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class MainTest {
-  ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+  ByteArrayOutputStream outputStreamCaptor;
 
   @BeforeEach
   public void setUp(){
+    outputStreamCaptor = new ByteArrayOutputStream();
     System.setOut(new PrintStream(outputStreamCaptor));
   }
 
@@ -23,6 +24,16 @@ public class MainTest {
   public void shouldShowTheHelpWhenNoArgs() {
 
     Main.main(new String[0]);
+
+    assertEquals("some help message\n", outputStreamCaptor.toString());
+  }
+
+  @Test
+  @Tag("e2e")
+  public void shouldShowTheHelpWhenMultipleArgs() {
+    String []args = {"arg1", "arg2"};
+
+    Main.main(args);
 
     assertEquals("some help message\n", outputStreamCaptor.toString());
   }
