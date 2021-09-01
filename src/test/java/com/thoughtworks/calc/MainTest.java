@@ -37,4 +37,14 @@ public class MainTest {
 
     assertEquals("some help message\n", outputStreamCaptor.toString());
   }
+
+  @Test
+  @Tag("e2e")
+  public void shouldPrintTheArgumentWhenItsAnInteger() {
+    String []args = {"1"};
+
+    Main.main(args);
+
+    assertEquals("1\n", outputStreamCaptor.toString());
+  }
 }

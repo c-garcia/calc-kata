@@ -33,12 +33,12 @@ public class SmokeTest {
     assertTrue(true);
   }
 
-  @Test
-  public void shouldPassWithMocks() {
-    var sut = mock(ExampleInterface.class);
-    when(sut.sum(1, 2)).thenReturn(3);
-    var res = sut.sum(1, 2);
-    assertEquals(3, res);
-    verify(sut, times(1)).sum(1, 2);
-  }
+//  @Test
+//  public void shouldPassWithMocks() {
+//    var sut = mock(ExampleInterface.class);
+//    when(sut.sum(1, 2)).thenReturn(3);
+//    var res = sut.sum(1, 2);
+//    assertEquals(3, res);
+//    verify(sut, times(1)).sum(1, 2);
+//  }
 }
