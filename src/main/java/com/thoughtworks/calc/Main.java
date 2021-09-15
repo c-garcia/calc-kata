@@ -6,7 +6,11 @@ public class Main {
     if (args.length == 1) {
       try {
         String[] tokens = args[0].split("\\+");
-
+        //No plus sign
+        if(tokens.length == 1) {
+          System.out.println(Integer.parseInt(tokens[0]));
+          return;
+        }
         int a = Integer.parseInt(tokens[0]);
         int b = Integer.parseInt(tokens[1]);
         System.out.println(a + b);
