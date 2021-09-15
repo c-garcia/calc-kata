@@ -8,15 +8,15 @@ You can do it your own way or try to achieve the following tasks.
 
 ## Tasks
 
-- [x] When it receives no arguments returns a usage help string
+- [X] When it receives no arguments returns a usage help string
 
-- [x]  When it receives multiple arguments returns a usage help string
+- [X]  When it receives multiple arguments returns a usage help string
 
-- [x] When it receives an integer returns it as a result
+- [X] When it receives an integer returns it as a result
 
-- [x] Can execute an **addition** expression between two integers 
+- [X] Can execute an **addition** expression between two integers 
 
-- [ ] Can execute an **addition** expression between any number of integers 
+- [X] Can execute an **addition** expression between any number of integers 
 
 - [ ] Can execute an **addition** expression between any number of floating-point numbers
 

@@ -7,13 +7,16 @@ public class Main {
       try {
         String[] tokens = args[0].split("\\+");
         //No plus sign
-        if(tokens.length == 1) {
+        if (tokens.length == 1) {
           System.out.println(Integer.parseInt(tokens[0]));
           return;
         }
-        int a = Integer.parseInt(tokens[0]);
-        int b = Integer.parseInt(tokens[1]);
-        System.out.println(a + b);
+        int sum = 0;
+        for (String token : tokens) {
+          int operand = Integer.parseInt(token);
+          sum += operand;
+        }
+        System.out.println(sum);
         return;
       } catch (NumberFormatException ex) {
         showHelpMessage();

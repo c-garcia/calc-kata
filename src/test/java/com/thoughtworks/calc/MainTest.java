@@ -57,4 +57,14 @@ public class MainTest {
 
     assertEquals("3\n", outputStreamCaptor.toString());
   }
+
+  @Test
+  @Tag("e2e")
+  public void shouldPrintTheResultOfAnAdditionBetweenFiveIntegers() {
+    String []args = {"1+2+7+8+14"};
+
+    Main.main(args);
+
+    assertEquals("32\n", outputStreamCaptor.toString());
+  }
 }
