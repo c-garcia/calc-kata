@@ -14,7 +14,7 @@ You can do it your own way or try to achieve the following tasks.
 
 - [x] When it receives an integer returns it as a result
 
-- [ ] Can execute an **addition** expression between two integers 
+- [x] Can execute an **addition** expression between two integers 
 
 - [ ] Can execute an **addition** expression between any number of integers 
 
