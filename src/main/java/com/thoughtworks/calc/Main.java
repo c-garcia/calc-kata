@@ -5,8 +5,11 @@ public class Main {
   public static void main(String[] args) {
     if (args.length == 1) {
       try {
-        int input = Integer.parseInt(args[0]);
-        System.out.println(input);
+        String[] tokens = args[0].split("\\+");
+
+        int a = Integer.parseInt(tokens[0]);
+        int b = Integer.parseInt(tokens[1]);
+        System.out.println(a + b);
         return;
       } catch (NumberFormatException ex) {
         showHelpMessage();

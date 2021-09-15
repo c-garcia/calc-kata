@@ -47,4 +47,14 @@ public class MainTest {
 
     assertEquals("1\n", outputStreamCaptor.toString());
   }
+
+  @Test
+  @Tag("e2e")
+  public void shouldPrintTheResultOfAnAdditionBetweenTwoIntegers() {
+    String []args = {"1+2"};
+
+    Main.main(args);
+
+    assertEquals("3\n", outputStreamCaptor.toString());
+  }
 }
