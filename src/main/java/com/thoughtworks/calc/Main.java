@@ -1,30 +1,15 @@
 package com.thoughtworks.calc;
 
+import com.thoughtworks.calc.model.CalculateChainOfResponsibility;
+import com.thoughtworks.calc.model.SingleNumberCalculator;
+
 public class Main {
 
   public static void main(String[] args) {
-    if (args.length == 1) {
-      try {
-        String[] tokens = args[0].split("\\+");
-        //No plus sign
-        if (tokens.length == 1) {
-          System.out.println(Integer.parseInt(tokens[0]));
-          return;
-        }
-        int sum = 0;
-        for (String token : tokens) {
-          int operand = Integer.parseInt(token);
-          sum += operand;
-        }
-        System.out.println(sum);
-        return;
-      } catch (NumberFormatException ex) {
-        showHelpMessage();
-        return;
-      }
-    }
-
-    showHelpMessage();
+    var calc = new CalculateChainOfResponsibility(
+            new SingleNumberCalculator(),
+    );
+    System.out.println(calc.calculate(args[0]));
   }
 
   private static void showHelpMessage() {
