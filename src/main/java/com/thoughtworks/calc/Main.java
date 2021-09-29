@@ -7,7 +7,7 @@ public class Main {
 
   public static void main(String[] args) {
     var calc = new CalculateChainOfResponsibility(
-            new SingleNumberCalculator(),
+            new SingleNumberCalculator()
     );
     System.out.println(calc.calculate(args[0]));
   }
