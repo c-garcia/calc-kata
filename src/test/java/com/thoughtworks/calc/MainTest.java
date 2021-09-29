@@ -49,22 +49,22 @@ public class MainTest {
   }
 
   @Test
-  @Tag("e2e")
+//  @Tag("e2e")
   public void shouldPrintTheResultOfAnAdditionBetweenTwoIntegers() {
     String []args = {"1+2"};
 
     Main.main(args);
 
-    assertEquals("3\n", outputStreamCaptor.toString());
+    assertEquals("3.0\n", outputStreamCaptor.toString());
   }
 
   @Test
-  @Tag("e2e")
+//  @Tag("e2e")
   public void shouldPrintTheResultOfAnAdditionBetweenFiveIntegers() {
     String []args = {"1+2+7+8+14"};
 
     Main.main(args);
 
-    assertEquals("32\n", outputStreamCaptor.toString());
+    assertEquals("32.0\n", outputStreamCaptor.toString());
   }
 }
